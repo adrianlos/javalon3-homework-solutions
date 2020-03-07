@@ -8,5 +8,4 @@ import java.util.List;
 public class THCStats {
     private final List<PriceSnapshot> priceSnapshots;
 
-
 }

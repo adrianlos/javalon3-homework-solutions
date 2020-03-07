@@ -13,6 +13,10 @@ public class HiddenNumbers {
     }
 
     public int sum() {
-        return PATTERN.matcher(lineWithNumbers).results().map(MatchResult::group).map(Integer::parseInt).reduce(Integer::sum).orElse(0);
+        return PATTERN.matcher(lineWithNumbers).results()
+                .map(MatchResult::group)
+                .map(Integer::parseInt)
+                .reduce(Integer::sum)
+                .orElse(0);
     }
 }
