@@ -33,7 +33,7 @@ class HiddenNumbersTest {
         //when
         int sum = new HiddenNumbers(input).sum();
         //then
-        assertEquals(-27, sum);
+        assertEquals(33, sum);
     }
 
     @Test

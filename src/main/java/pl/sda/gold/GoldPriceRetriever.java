@@ -17,7 +17,6 @@ public class GoldPriceRetriever {
     public BigDecimal fetchGoldPrice() throws IOException, InterruptedException {
         URI uri = URI.create("http://api.nbp.pl/api/cenyzlota/");
         HttpRequest request = HttpRequest.newBuilder(uri).GET().build();
-
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         String responseBody = response.body();
         PriceResponse[] priceResponses = new ObjectMapper().readValue(responseBody, PriceResponse[].class);

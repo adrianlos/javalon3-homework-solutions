@@ -11,6 +11,11 @@ public class Indenter {
     private final String textToIndent;
 
     public Indenter(String textToIndent) {
+        if(textToIndent.chars()
+                .mapToObj(String::valueOf)
+                .noneMatch(this::isBracket)) {
+            throw new NoBracketsException("Brackets are missing");
+        }
         this.textToIndent = textToIndent;
     }
 

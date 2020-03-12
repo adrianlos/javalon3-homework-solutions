@@ -39,4 +39,12 @@ class IndenterTest {
         assertEquals(expected, indented);
     }
 
+    @Test()
+    void shouldThrowException() {
+        //given
+        String string = "123";
+        //then
+        assertThrows(NoBracketsException.class, () -> new Indenter(string));
+    }
+
 }
